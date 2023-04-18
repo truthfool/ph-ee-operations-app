@@ -88,7 +88,7 @@ public class OperationsApi {
             failResponse.put("response", "Requested incoming transfer does not exist or not yet completed!");
             return failResponse.toString();
         }
-
+        logger.info("Tenant : {}",tenantId);
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.add("Platform-TenantId", tenantId);
         httpHeaders.add("Content-Type", "application/json");
